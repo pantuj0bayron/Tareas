@@ -1,0 +1,27 @@
+{
+  "name": "institucion_academica",
+  "version": "1.0.0",
+  "description": "ejercicio_1",
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequalize",
+    "postgrepl",
+    "api"
+  ],
+  "license": "ISC",
+  "author": "bayron",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "pg": "^8.20.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.8"
+  }
+}
