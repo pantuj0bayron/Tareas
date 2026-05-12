@@ -3,21 +3,21 @@ const maestros = db.maestros;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
-    if(!req.body.nombre){
+    if(!req.body.nombre_del_maestro){
         res.status(400).send({
             message: "El contenido no puede estar vacio"
         });
         return;
     }
-    const maestros = {
-        nombre: req.body.nombre,
-        apellido: req.body.apellido,
-        dirreccion: req.body.dirreccion,
-        Correo: req.body.Correo,
-        telefono: req.body.telefono,
-        ingreso: req.body.ingreso
+    const nuevomaestros = {
+        nombre_del_maestro: req.body.nombre_del_maestro,
+        apellido_del_maestro: req.body.apellido_del_maestro,
+        dirreccion_del_maestro: req.body.dirreccion_del_maestro,
+        Correo_del_maestro: req.body.Correo_del_maestro,
+        telefono_del_maestro: req.body.telefono_del_maestro,
+        ingreso_del_maestro: req.body.ingreso_del_maestro
 };
-maestros .create(maestros)
+maestros .create(nuevomaestros)
 .then(data => {
     res.send(data);
 })

@@ -1,27 +1,27 @@
 const db = require('../models');
-const alumno = db.alumno;
+const alumno = db.alumnos;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
-    if(!req.body.nombre){
+    if(!req.body.nombre_del_estudiante){
         res.status(400).send({
             message: "El contenido no puede estar vacio"
         });
         return;
     }
-    const alumno = {
-        nombre_del_estudiante: req.body.nombre,
-        apellidos_del_estudiante: req.body.apellido,
-        dirreccion_del_estudiante: req.body.dirreccion,
-        Correo_del_estudiante: req.body.Correo,
-        telefono_del_estudiante: req.body.telefono,
-        edad_del_estudiante: req.body.edad,
-        sexo_del_estudiante: req.body.sexo,
-        curso_del_estudiante: req.body.curso,
+    const nuevoalumno = {
+        nombre_del_estudiante: req.body.nombre_del_estudiante,
+        apellidos_del_estudiante: req.body.apellidos_del_estudiante,
+        dirreccion_del_estudiante: req.body.dirreccion_del_estudiante,
+        Correo_del_estudiante: req.body.Correo_del_estudiante,
+        telefono_del_estudiante: req.body.telefono_del_estudiante,
+        edad_del_estudiante: req.body.edad_del_estudiante,
+        sexo_del_estudiante: req.body.sexo_del_estudiante,
+        curso_del_estudiante: req.body.curso_del_estudiante,
         nombre_del_encargado: req.body.nombre_del_encargado,
         ingreso: req.body.ingreso
 };
-alumno .create(alumno)
+alumno .create(nuevoalumno)
 .then(data => {
     res.send(data);
 })

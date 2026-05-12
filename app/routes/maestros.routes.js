@@ -3,7 +3,7 @@ module.exports = app => {
 
     var router = require("express").Router();
 
-    router.post ("/create", maestros.create);
+    router.post ("/create/maestros", maestros.create);
 
     router.get("/", maestros.findAll);
 

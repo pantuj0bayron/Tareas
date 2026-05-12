@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize)=>
 {
 
-const alumnos = sequelize.define("alumno", {
+const alumnos = sequelize.define("alumnos", {
     nombre_del_estudiante: {
         type: Sequelize.STRING
     },

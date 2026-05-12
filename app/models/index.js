@@ -21,8 +21,8 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 });
 const db = {};
 db.Sequelize = sequelize;
-db.clientes = require('./alumnos.model.js')(sequelize, Sequelize);
-db.productos = require('./encargados.model.js')(sequelize, Sequelize);
+db.alumnos = require('./alumnos.model.js')(sequelize, Sequelize);
+db.encargados = require('./encargados.model.js')(sequelize, Sequelize);
 db.maestros = require('./maestros.model.js')(sequelize, Sequelize);
 module.exports = db;
 

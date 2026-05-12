@@ -3,24 +3,24 @@ const encargados = db.encargados;
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
-    if(!req.body.nombre){
+    if(!req.body.nombre_del_encargado) {
         res.status(400).send({
             message: "El contenido no puede estar vacio"
         });
         return;
     }
-    const encargados = {
-        nombre_del_encargado: req.body.nombre,
-        apellidos_del_encargado: req.body.apellido,
-        dirreccion_del_encargado: req.body.dirreccion,
-        Correo_del_encargado: req.body.Correo,
-        telefono_del_encargado: req.body.telefono,
-        edad_del_encargado: req.body.edad,
+    const nuevoencargados = {
+        nombre_del_encargado: req.body.nombre_del_encargado,
+        apellidos_del_encargado: req.body.apellidos_del_encargado,
+        dirreccion_del_encargado: req.body.dirreccion_del_encargado,
+        Correo_del_encargado: req.body.Correo_del_encargado,
+        telefono_del_encargado: req.body.telefono_del_encargado,
+        edad_del_encargado: req.body.edad_del_encargado,
         sexo_del_encargado: req.body.sexo,
         estudiante_del_encargado: req.body.estudiante_del_encargado,
         ingreso: req.body.ingreso
 };
-encargados .create(encargados)
+encargados .create(nuevoencargados)
 .then(data => {
     res.send(data);
 })
