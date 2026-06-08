@@ -12,7 +12,6 @@ exports.create = (req, res) => {
     const nuevoalumno = {
         nombre_del_estudiante: req.body.nombre_del_estudiante,
         apellidos_del_estudiante: req.body.apellidos_del_estudiante,
-        promedio_del_estudiante: req.body.promedio_del_estudiante,
         dirreccion_del_estudiante: req.body.dirreccion_del_estudiante,
         Correo_del_estudiante: req.body.Correo_del_estudiante,
         telefono_del_estudiante: req.body.telefono_del_estudiante,
@@ -20,6 +19,7 @@ exports.create = (req, res) => {
         sexo_del_estudiante: req.body.sexo_del_estudiante,
         curso_del_estudiante: req.body.curso_del_estudiante,
         nombre_del_encargado: req.body.nombre_del_encargado,
+        promedio_del_estudiante: req.body.promedio_del_estudiante,
         ingreso: req.body.ingreso
 };
 alumno .create(nuevoalumno)

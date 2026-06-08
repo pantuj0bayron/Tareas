@@ -20,6 +20,9 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
     }
 });
 const db = {};
+sequelize.sync({ alter: true }).then(() => {
+  console.log("Base de datos sincronizada.");
+});
 db.Sequelize = sequelize;
 db.alumnos = require('./alumnos.model.js')(sequelize, Sequelize);
 db.encargados = require('./encargados.model.js')(sequelize, Sequelize);
