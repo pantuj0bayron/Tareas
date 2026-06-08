@@ -8,6 +8,9 @@ const alumnos = sequelize.define("alumnos", {
     apellidos_del_estudiante: {
         type: Sequelize.STRING
     }, 
+    promedio_del_estudiante: {
+        type: Sequelize.INTEGER
+    },
     dirreccion_del_estudiante: {
         type: Sequelize.STRING
     },
